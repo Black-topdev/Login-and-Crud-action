@@ -1,0 +1,24 @@
+.login_body, .signup_body {
+    margin: 0 auto;
+    max-width: 400px;
+    position: relative;
+    padding-top: 100px;
+    /* background-image: url(./building.jpeg); */
+}
+
+h1,h2,h3,h4,h5,h6,label,span {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+  }
+
+.body_style {
+    background-image: url(./building.jpeg);
+    background-repeat: no-repeat;
+    height: 660px;
+    background-size: cover;
+}
+
+.navbar.navbar-expand-lg.navbar-light.fixed-top {
+    background: rgb(74, 116, 153)
+}
