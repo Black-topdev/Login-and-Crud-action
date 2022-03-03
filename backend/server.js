@@ -76,6 +76,7 @@ app.get("/", (req, res) => {
 
 /* login api */
 app.post("/login", (req, res) => {
+  console.log('adsfd');
   try {
     if (req.body && req.body.username && req.body.password) {
       user.find({ username: req.body.username }, (err, data) => {
@@ -116,15 +117,15 @@ app.post("/login", (req, res) => {
 /* register api */
 app.post("/register", (req, res) => {
   try {
-    if (req.body && req.body.username && req.body.password) {
+    if (req.body && req.body.username && req.body.password && req.body.email) {
 
       user.find({ username: req.body.username }, (err, data) => {
 
         if (data.length == 0) {
-
           let User = new user({
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password,
+            email: req.body.email
           });
           User.save((err, data) => {
             if (err) {
